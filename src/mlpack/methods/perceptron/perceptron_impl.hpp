@@ -11,8 +11,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_METHODS_PERCEPTRON_PERCEPTRON_IMPL_HPP
-#define __MLPACK_METHODS_PERCEPTRON_PERCEPTRON_IMPL_HPP
+#ifndef MLPACK_METHODS_PERCEPTRON_PERCEPTRON_IMPL_HPP
+#define MLPACK_METHODS_PERCEPTRON_PERCEPTRON_IMPL_HPP
 
 #include "perceptron.hpp"
 

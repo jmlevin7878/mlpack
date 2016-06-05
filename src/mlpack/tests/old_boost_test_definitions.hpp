@@ -12,8 +12,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_TESTS_OLD_BOOST_TEST_DEFINITIONS_HPP
-#define __MLPACK_TESTS_OLD_BOOST_TEST_DEFINITIONS_HPP
+#ifndef MLPACK_TESTS_OLD_BOOST_TEST_DEFINITIONS_HPP
+#define MLPACK_TESTS_OLD_BOOST_TEST_DEFINITIONS_HPP
 
 #include <boost/version.hpp>
 

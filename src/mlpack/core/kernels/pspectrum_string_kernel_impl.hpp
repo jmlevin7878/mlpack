@@ -15,8 +15,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_KERNELS_PSPECTRUM_STRING_KERNEL_IMPL_HPP
-#define __MLPACK_CORE_KERNELS_PSPECTRUM_STRING_KERNEL_IMPL_HPP
+#ifndef MLPACK_CORE_KERNELS_PSPECTRUM_STRING_KERNEL_IMPL_HPP
+#define MLPACK_CORE_KERNELS_PSPECTRUM_STRING_KERNEL_IMPL_HPP
 
 // In case it has not been included yet.
 #include "pspectrum_string_kernel.hpp"

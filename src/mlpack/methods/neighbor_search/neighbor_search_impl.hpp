@@ -12,8 +12,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_METHODS_NEIGHBOR_SEARCH_NEIGHBOR_SEARCH_IMPL_HPP
-#define __MLPACK_METHODS_NEIGHBOR_SEARCH_NEIGHBOR_SEARCH_IMPL_HPP
+#ifndef MLPACK_METHODS_NEIGHBOR_SEARCH_NEIGHBOR_SEARCH_IMPL_HPP
+#define MLPACK_METHODS_NEIGHBOR_SEARCH_NEIGHBOR_SEARCH_IMPL_HPP
 
 #include <mlpack/core.hpp>
 
@@ -647,7 +647,6 @@ Search(const size_t k,
         // Reset bounds of this node.
         node->Stat().FirstBound() = SortPolicy::WorstDistance();
         node->Stat().SecondBound() = SortPolicy::WorstDistance();
-        node->Stat().Bound() = SortPolicy::WorstDistance();
         node->Stat().LastDistance() = 0.0;
 
         // Then add the children.

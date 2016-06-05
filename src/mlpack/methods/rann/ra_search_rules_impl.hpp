@@ -11,8 +11,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_METHODS_RANN_RA_SEARCH_RULES_IMPL_HPP
-#define __MLPACK_METHODS_RANN_RA_SEARCH_RULES_IMPL_HPP
+#ifndef MLPACK_METHODS_RANN_RA_SEARCH_RULES_IMPL_HPP
+#define MLPACK_METHODS_RANN_RA_SEARCH_RULES_IMPL_HPP
 
 // In case it hasn't been included yet.
 #include "ra_search_rules.hpp"
@@ -816,4 +816,4 @@ void RASearchRules<SortPolicy, MetricType, TreeType>::InsertNeighbor(
 } // namespace neighbor
 } // namespace mlpack
 
-#endif // __MLPACK_METHODS_RANN_RA_SEARCH_RULES_IMPL_HPP
+#endif // MLPACK_METHODS_RANN_RA_SEARCH_RULES_IMPL_HPP

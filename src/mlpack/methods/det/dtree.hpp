@@ -12,8 +12,8 @@
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
 
-#ifndef __MLPACK_METHODS_DET_DTREE_HPP
-#define __MLPACK_METHODS_DET_DTREE_HPP
+#ifndef MLPACK_METHODS_DET_DTREE_HPP
+#define MLPACK_METHODS_DET_DTREE_HPP
 
 #include <mlpack/core.hpp>
 
@@ -347,4 +347,4 @@ class DTree
 } // namespace det
 } // namespace mlpack
 
-#endif // __MLPACK_METHODS_DET_DTREE_HPP
+#endif // MLPACK_METHODS_DET_DTREE_HPP

@@ -10,8 +10,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_MATH_RANGE_IMPL_HPP
-#define __MLPACK_CORE_MATH_RANGE_IMPL_HPP
+#ifndef MLPACK_CORE_MATH_RANGE_IMPL_HPP
+#define MLPACK_CORE_MATH_RANGE_IMPL_HPP
 
 #include "range.hpp"
 #include <float.h>
@@ -25,7 +25,8 @@ namespace math {
  */
 template<typename T>
 inline RangeType<T>::RangeType() :
-    lo(DBL_MAX), hi(-DBL_MAX) { /* nothing else to do */ }
+    lo(std::numeric_limits<T>::max()),
+    hi(-std::numeric_limits<T>::max()) { /* nothing else to do */ }
 
 /**
  * Initialize a range to enclose only the given point.

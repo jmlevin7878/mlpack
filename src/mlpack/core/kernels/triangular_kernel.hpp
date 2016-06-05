@@ -11,8 +11,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_KERNELS_TRIANGULAR_KERNEL_HPP
-#define __MLPACK_CORE_KERNELS_TRIANGULAR_KERNEL_HPP
+#ifndef MLPACK_CORE_KERNELS_TRIANGULAR_KERNEL_HPP
+#define MLPACK_CORE_KERNELS_TRIANGULAR_KERNEL_HPP
 
 #include <mlpack/core.hpp>
 #include <mlpack/core/metrics/lmetric.hpp>
@@ -64,9 +64,9 @@ class TriangularKernel
   {
     return std::max(0.0, (1 - distance) / bandwidth);
   }
-  
+
   /**
-   * Evaluate the gradient of triangular kernel 
+   * Evaluate the gradient of triangular kernel
    * given that the distance between the two
    * points is known.
    *

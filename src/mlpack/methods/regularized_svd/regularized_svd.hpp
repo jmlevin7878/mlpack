@@ -12,8 +12,8 @@
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
 
-#ifndef __MLPACK_METHODS_REGULARIZED_SVD_REGULARIZED_SVD_HPP
-#define __MLPACK_METHODS_REGULARIZED_SVD_REGULARIZED_SVD_HPP
+#ifndef MLPACK_METHODS_REGULARIZED_SVD_REGULARIZED_SVD_HPP
+#define MLPACK_METHODS_REGULARIZED_SVD_REGULARIZED_SVD_HPP
 
 #include <mlpack/core.hpp>
 #include <mlpack/core/optimizers/sgd/sgd.hpp>

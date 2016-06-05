@@ -12,8 +12,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_RANN_RA_TYPEDEF_HPP
-#define __MLPACK_RANN_RA_TYPEDEF_HPP
+#ifndef MLPACK_RANN_RA_TYPEDEF_HPP
+#define MLPACK_RANN_RA_TYPEDEF_HPP
 
 // In case someone included this directly.
 #include "ra_search.hpp"

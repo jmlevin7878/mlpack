@@ -12,8 +12,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_TREE_RECTANGLE_TREE_TYPEDEF_HPP
-#define __MLPACK_CORE_TREE_RECTANGLE_TREE_TYPEDEF_HPP
+#ifndef MLPACK_CORE_TREE_RECTANGLE_TREE_TYPEDEF_HPP
+#define MLPACK_CORE_TREE_RECTANGLE_TREE_TYPEDEF_HPP
 
 #include "rectangle_tree.hpp"
 
@@ -75,15 +75,29 @@ using RStarTree = RectangleTree<MetricType,
                                 RStarTreeDescentHeuristic>;
 
 /**
- * X-tree
- * (not yet finished)
+ * The X-tree, a variant of the R tree with supernodes.  This template typedef
+ * satisfies the TreeType policy API.
+ *
+ * @code
+ * @inproceedings{berchtold1996r,
+ *   title = {The X-Tree: An Index Structure for High--Dimensional Data},
+ *   author = {Berchtold, Stefan and Keim, Daniel A. and Kriegel, Hans-Peter},
+ *   booktitle = {Proc. 22th Int. Conf. on Very Large Databases (VLDB'96), Bombay, India},
+ *   editor = {Vijayaraman, T. and Buchmann, Alex and Mohan, C. and Sarda, N.},
+ *   pages = {28--39},
+ *   year = {1996},
+ *   publisher = {Morgan Kaufmann}
+ * }
+ * @endcode
+ *
+ * @see @ref trees, RTree, RStarTree
  */
-//template<typename MetricType, typename StatisticType, typename MatType>
-//using XTree = RectangleTree<MetricType,
-//                            StatisticType,
-//                            MatType,
-//                            XTreeSplit,
-//                            XTreeDescentHeuristic>;
+template<typename MetricType, typename StatisticType, typename MatType>
+using XTree = RectangleTree<MetricType,
+                            StatisticType,
+                            MatType,
+                            XTreeSplit,
+                            RTreeDescentHeuristic>;
 
 } // namespace tree
 } // namespace mlpack

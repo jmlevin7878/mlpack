@@ -13,8 +13,8 @@
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
 
-#ifndef __MLPACK_METHODS_RADICAL_RADICAL_HPP
-#define __MLPACK_METHODS_RADICAL_RADICAL_HPP
+#ifndef MLPACK_METHODS_RADICAL_RADICAL_HPP
+#define MLPACK_METHODS_RADICAL_RADICAL_HPP
 
 #include <mlpack/core.hpp>
 

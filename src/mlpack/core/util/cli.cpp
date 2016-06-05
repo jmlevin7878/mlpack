@@ -62,7 +62,7 @@ CLI::CLI(const CLI& other) : desc(other.desc),
 CLI::~CLI()
 {
   // Terminate the program timers.
-  std::map<std::string, timeval>::iterator it;
+  std::map<std::string, std::chrono::microseconds>::iterator it;
   for (it = timer.GetAllTimers().begin(); it != timer.GetAllTimers().end();
        ++it)
   {
@@ -79,7 +79,7 @@ CLI::~CLI()
     Print();
 
     Log::Info << "Program timers:" << std::endl;
-    std::map<std::string, timeval>::iterator it;
+    std::map<std::string, std::chrono::microseconds>::iterator it;
     for (it = timer.GetAllTimers().begin(); it != timer.GetAllTimers().end();
         ++it)
     {

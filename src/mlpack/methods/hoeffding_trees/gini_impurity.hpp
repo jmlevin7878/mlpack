@@ -12,8 +12,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_METHODS_HOEFFDING_TREES_GINI_INDEX_HPP
-#define __MLPACK_METHODS_HOEFFDING_TREES_GINI_INDEX_HPP
+#ifndef MLPACK_METHODS_HOEFFDING_TREES_GINI_INDEX_HPP
+#define MLPACK_METHODS_HOEFFDING_TREES_GINI_INDEX_HPP
 
 #include <mlpack/core.hpp>
 

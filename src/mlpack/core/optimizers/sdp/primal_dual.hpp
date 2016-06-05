@@ -10,8 +10,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_OPTIMIZERS_SDP_PRIMAL_DUAL_HPP
-#define __MLPACK_CORE_OPTIMIZERS_SDP_PRIMAL_DUAL_HPP
+#ifndef MLPACK_CORE_OPTIMIZERS_SDP_PRIMAL_DUAL_HPP
+#define MLPACK_CORE_OPTIMIZERS_SDP_PRIMAL_DUAL_HPP
 
 #include <mlpack/core.hpp>
 #include <mlpack/core/optimizers/sdp/sdp.hpp>

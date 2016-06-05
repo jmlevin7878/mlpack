@@ -13,6 +13,7 @@
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
 #include "gaussian_distribution.hpp"
+#include <mlpack/methods/gmm/positive_definite_constraint.hpp>
 
 using namespace mlpack;
 using namespace mlpack::distribution;
@@ -123,18 +124,7 @@ void GaussianDistribution::Train(const arma::mat& observations)
   covariance /= (observations.n_cols - 1);
 
   // Ensure that the covariance is positive definite.
-  if (det(covariance) <= 1e-50)
-  {
-    Log::Debug << "GaussianDistribution::Train(): Covariance matrix is not "
-        << "positive definite. Adding perturbation." << std::endl;
-
-    double perturbation = 1e-30;
-    while (det(covariance) <= 1e-50)
-    {
-      covariance.diag() += perturbation;
-      perturbation *= 10; // Slow, but we don't want to add too much.
-    }
-  }
+  gmm::PositiveDefiniteConstraint::ApplyConstraint(covariance);
 
   FactorCovariance();
 }
@@ -180,7 +170,8 @@ void GaussianDistribution::Train(const arma::mat& observations,
   }
 
   // Normalize.
-  mean /= sumProb;
+  if (sumProb > 0)
+    mean /= sumProb;
 
   // Now find the covariance.
   for (size_t i = 0; i < observations.n_cols; i++)
@@ -190,21 +181,11 @@ void GaussianDistribution::Train(const arma::mat& observations,
   }
 
   // This is probably biased, but I don't know how to unbias it.
-  covariance /= sumProb;
+  if (sumProb > 0)
+    covariance /= sumProb;
 
   // Ensure that the covariance is positive definite.
-  if (det(covariance) <= 1e-50)
-  {
-    Log::Debug << "GaussianDistribution::Train(): Covariance matrix is not "
-        << "positive definite. Adding perturbation." << std::endl;
-
-    double perturbation = 1e-30;
-    while (det(covariance) <= 1e-50)
-    {
-      covariance.diag() += perturbation;
-      perturbation *= 10; // Slow, but we don't want to add too much.
-    }
-  }
+  gmm::PositiveDefiniteConstraint::ApplyConstraint(covariance);
 
   FactorCovariance();
 }

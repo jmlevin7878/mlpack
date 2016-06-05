@@ -15,8 +15,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_UTIL_ARMA_CONFIG_CHECK_HPP
-#define __MLPACK_CORE_UTIL_ARMA_CONFIG_CHECK_HPP
+#ifndef MLPACK_CORE_UTIL_ARMA_CONFIG_CHECK_HPP
+#define MLPACK_CORE_UTIL_ARMA_CONFIG_CHECK_HPP
 
 #include "arma_config.hpp"
 

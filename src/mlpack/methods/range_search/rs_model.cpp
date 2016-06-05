@@ -21,14 +21,15 @@ using namespace mlpack::range;
  * Initialize the RSModel with the given tree type and whether or not a random
  * basis should be used.
  */
-RSModel::RSModel(int treeType, bool randomBasis) :
+RSModel::RSModel(TreeTypes treeType, bool randomBasis) :
     treeType(treeType),
     randomBasis(randomBasis),
     kdTreeRS(NULL),
     coverTreeRS(NULL),
     rTreeRS(NULL),
     rStarTreeRS(NULL),
-    ballTreeRS(NULL)
+    ballTreeRS(NULL),
+    xTreeRS(NULL)
 {
   // Nothing to do.
 }
@@ -122,6 +123,11 @@ void RSModel::BuildModel(arma::mat&& referenceSet,
         ballTreeRS->oldFromNewReferences = move(oldFromNewReferences);
       }
 
+      break;
+
+    case X_TREE:
+      xTreeRS = new RSType<tree::XTree>(move(referenceSet), naive,
+          singleMode);
       break;
   }
 
@@ -228,6 +234,10 @@ void RSModel::Search(arma::mat&& querySet,
         ballTreeRS->Search(querySet, range, neighbors, distances);
       }
       break;
+
+    case X_TREE:
+      xTreeRS->Search(querySet, range, neighbors, distances);
+      break;
   }
 }
 
@@ -266,6 +276,10 @@ void RSModel::Search(const math::Range& range,
     case BALL_TREE:
       ballTreeRS->Search(range, neighbors, distances);
       break;
+
+    case X_TREE:
+      xTreeRS->Search(range, neighbors, distances);
+      break;
   }
 }
 
@@ -284,6 +298,8 @@ std::string RSModel::TreeName() const
       return "R* tree";
     case BALL_TREE:
       return "ball tree";
+    case X_TREE:
+      return "X tree";
     default:
       return "unknown tree";
   }
@@ -302,10 +318,13 @@ void RSModel::CleanMemory()
     delete rStarTreeRS;
   if (ballTreeRS)
     delete ballTreeRS;
+  if (xTreeRS)
+    delete xTreeRS;
 
   kdTreeRS = NULL;
   coverTreeRS = NULL;
   rTreeRS = NULL;
   rStarTreeRS = NULL;
   ballTreeRS = NULL;
+  xTreeRS = NULL;
 }

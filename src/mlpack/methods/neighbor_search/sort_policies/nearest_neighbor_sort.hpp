@@ -12,8 +12,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_METHODS_NEIGHBOR_SEARCH_NEAREST_NEIGHBOR_SORT_HPP
-#define __MLPACK_METHODS_NEIGHBOR_SEARCH_NEAREST_NEIGHBOR_SORT_HPP
+#ifndef MLPACK_METHODS_NEIGHBOR_SEARCH_NEAREST_NEIGHBOR_SORT_HPP
+#define MLPACK_METHODS_NEIGHBOR_SEARCH_NEAREST_NEIGHBOR_SORT_HPP
 
 #include <mlpack/core.hpp>
 
@@ -53,16 +53,16 @@ class NearestNeighborSort
 
   /**
    * Return whether or not value is "better" than ref.  In this case, that means
-   * that the value is less than the reference.
+   * that the value is less than or equal to the reference.
    *
    * @param value Value to compare
    * @param ref Value to compare with
    *
-   * @return bool indicating whether or not (value < ref).
+   * @return bool indicating whether or not (value <= ref).
    */
   static inline bool IsBetter(const double value, const double ref)
   {
-    return (value < ref);
+    return (value <= ref);
   }
 
   /**

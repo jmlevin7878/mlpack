@@ -14,8 +14,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_SFINAE_UTILITY
-#define __MLPACK_CORE_SFINAE_UTILITY
+#ifndef MLPACK_CORE_SFINAE_UTILITY
+#define MLPACK_CORE_SFINAE_UTILITY
 
 #include <boost/utility/enable_if.hpp>
 #include <boost/type_traits.hpp>

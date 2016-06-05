@@ -11,8 +11,8 @@
  * 3-clause BSD license along with mlpack.  If not, see
  * http://www.opensource.org/licenses/BSD-3-Clause for more information.
  */
-#ifndef __MLPACK_CORE_KERNELS_EPANECHNIKOV_KERNEL_HPP
-#define __MLPACK_CORE_KERNELS_EPANECHNIKOV_KERNEL_HPP
+#ifndef MLPACK_CORE_KERNELS_EPANECHNIKOV_KERNEL_HPP
+#define MLPACK_CORE_KERNELS_EPANECHNIKOV_KERNEL_HPP
 
 #include <mlpack/core.hpp>
 
@@ -59,12 +59,12 @@ class EpanechnikovKernel
   double Evaluate(const double distance) const;
 
   /**
-   * Evaluate the Gradient of Epanechnikov kernel 
+   * Evaluate the Gradient of Epanechnikov kernel
    * given that the distance between the two
    * input points is known.
    */
   double Gradient(const double distance) const;
-  
+
   /**
    * Evaluate the Gradient of Epanechnikov kernel
    * given that the squared distance between the two
