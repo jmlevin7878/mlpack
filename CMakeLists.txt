@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 2.8.5)
 project(mlpack C CXX)
 
+## Added by Levin - 7/7/16 ##
+SET (BOOST_ROOT "/usr/local/src/boost_1_58_0")
+SET (BOOST_LIBRARYDIR "/usr/local/src/boost_1_58_0/libs")
+SET (Boost_INCLUDE_DIR "/usr/local/src/boost_1_58_0")
+##
+
+
 # Ensure that we have a C++11 compiler.  In newer versions of CMake, this is
 # done with target_compile_features() when the mlpack library target is added in
 # src/mlpack/CMakeLists.txt.
